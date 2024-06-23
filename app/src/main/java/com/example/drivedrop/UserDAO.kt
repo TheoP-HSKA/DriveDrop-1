@@ -17,12 +17,12 @@ interface UserDAO {
     suspend fun deleteUser(user: User)
 
     //Using Observable to ensure updates on changes
-    @Query("SELECT * FROM user ORDER BY firstname ASC")
+    @Query("SELECT * FROM user ORDER BY firstName ASC")
     fun getUserOrderedByFirstName(): Flow<List<User>>
 
     @Query("SELECT * FROM user ORDER BY email ASC")
     fun getUserOrderedByEmail(): Flow<List<User>>
 
-    @Query("SELECT * FROM user ORDER BY username ASC")
+    @Query("SELECT * FROM user ORDER BY userName ASC")
     fun getUserOrderedByUsername(): Flow<List<User>>
 }
