@@ -11,8 +11,8 @@ data class Tour (
     val carId : Int,
     //reference to driverID
     val driverId : Int,
-    //reference to ownerID
-    val ownerId : Int,
+    //reference to routeID
+    val routeId : Int,
     val tip : Int,
     val fuelType : String,
 )
