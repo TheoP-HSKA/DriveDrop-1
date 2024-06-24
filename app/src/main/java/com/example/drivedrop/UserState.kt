@@ -1,5 +1,7 @@
 package com.example.drivedrop
 
+import com.example.drivedrop.entities.User
+
 data class UserState(
     val users: List<User> = emptyList(),
     val firstName: String = "",

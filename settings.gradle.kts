@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "DriveDrop"
 include(":app")
+include(":mytestapp")

@@ -1,5 +1,7 @@
 package com.example.drivedrop
 
+import com.example.drivedrop.entities.User
+
 sealed interface UserEvent {
     object SaveUser : UserEvent
     data class SetFirstName(val firstName: String): UserEvent
@@ -12,6 +14,6 @@ sealed interface UserEvent {
 
     object ShowDialog: UserEvent
     object HideDialog: UserEvent
-    data class SortUSer(val SortType: SortType): UserEvent
-    data class DeleteContact(val user:User): UserEvent
+    data class SortUsers(val sortType: SortType): UserEvent
+    data class DeleteUser(val user: User): UserEvent
 }

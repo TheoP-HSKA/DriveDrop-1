@@ -1,4 +1,4 @@
-package com.example.drivedrop
+package com.example.drivedrop.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

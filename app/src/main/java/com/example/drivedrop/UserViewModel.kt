@@ -2,6 +2,7 @@ package com.example.drivedrop
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.drivedrop.entities.User
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -36,7 +37,7 @@ class UserViewModel(
 
     fun onEvent(event: UserEvent) {
         when (event) {
-            is UserEvent.DeleteContact -> {
+            is UserEvent.DeleteUser -> {
                 viewModelScope.launch() {
                     dao.deleteUser(event.user)
                 }
@@ -134,8 +135,8 @@ class UserViewModel(
                 }
             }
 
-            is UserEvent.SortUSer -> {
-                _sortType.value =event.SortType
+            is UserEvent.SortUsers -> {
+                _sortType.value =event.sortType
             }
         }
     }
